@@ -1,3 +1,6 @@
+<?php
+include("../seguridad.php");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -22,8 +25,7 @@
 
 	<!--Cabecera-->
 	<?php
-
-	include("headerAdmin.php");
+	include("../header.php");
 
 
 	?>
@@ -233,7 +235,7 @@
 					<div class="row">
 						<div class="col-12 mb-1">
 							<p class="text-center cuenta">¿NECESITAS UNA CUENTA?</p>
-							<a class="btn w-100" href="registro.html" role="buttom">REGÍSTRATE</a>
+							<a class="btn w-100" href="../registro.html" role="buttom">REGÍSTRATE</a>
 						</div>
 					</div>
 				</div>

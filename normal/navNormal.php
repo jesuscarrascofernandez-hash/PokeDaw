@@ -165,7 +165,7 @@
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
 							<i class="bi bi-person-fill"> <?php echo $_SESSION['name']; ?></a></i>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+							<li><a class="dropdown-item" href="cerrarSesion.php">Cerrar sesión</a></li>
 						</ul>
 					</li>
 

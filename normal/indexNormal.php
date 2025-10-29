@@ -25,7 +25,7 @@ include("seguridad.php");
 	<!--Cabecera-->
 	<?php
 
-	include("headerNormal.php");
+	include("../header.php");
 	include("navNormal.php");
 
 	?>
