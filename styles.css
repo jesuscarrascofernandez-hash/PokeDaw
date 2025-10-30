@@ -1,5 +1,12 @@
 
 
+:root {
+  	--marron-claro: #824037; 
+  	--marron-oscuro: #362426; 
+ 	--azul: #A1D9EF;
+	--amarillo-claro:#F5EC9E;
+	--amarillo-oscuro:#D8B859;
+}
 /*GENERAL*/
 body {
   display: flex;
@@ -8,7 +15,7 @@ body {
   margin: 0; /* Quita márgenes por defecto */
 }
 section{
-	background-color: #A1D9EF;
+	background-color:  var(--azul);
 	flex-grow: 1; /* ¡Esta es la clave! */
   /* Esta regla hace que este elemento se estire
      para ocupar todo el espacio vertical disponible,
@@ -18,26 +25,26 @@ section{
 	border-radius:8px;	
 	box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 	color: #D8B859;
-	border:3px solid #824037;		
-	background-color: #F5EC9E;	
+	border:3px solid var(--marron-claro);		
+	background-color: var(--amarillo-claro);	
 }
 
 .btn{
-	background-color: #362426;
+	background-color: var(--marron-oscuro);
 	color:white;		
 	font-weight: bold;	
 }
 .btn:hover{
 	color:#F5EC9E;
-	background-color: #824037;
-	border: 1px solid #362426;
+	background-color: var(--marron-claro);
+	border: 1px solid var(--marron-oscuro);
 }
 .h2{
 	font-size: 21pt;
 }
 .cuenta{
 	font-size: 13pt;
-	color: #362426;
+	color: var(--marron-oscuro);
 }
 .form-text{
 	font-size: 9pt;
@@ -47,8 +54,8 @@ section{
 /*HEADER*/
 .cabecera{
 	
-	background-color:#824037;
-	border-bottom: #362426 5px solid ;
+	background-color:var(--marron-claro);
+	border-bottom: var(--marron-oscuro) 5px solid ;
 	margin-top: 0;
 	margin-bottom: 20PX;
 	
@@ -61,7 +68,7 @@ section{
 	/* 1. Aplicar el degradado como fondo */
     /* linear-gradient(dirección, color-inicio, color-fin) */
     /* 'to bottom' hace que el degradado vaya de arriba hacia abajo (el valor por defecto) */
-    background-image: linear-gradient(to bottom, #D8B859, #F5EC9E);
+    background-image: linear-gradient(to bottom, var(--amarillo-oscuro), var(--amarillo-claro));
     
     /* 2. Recortar el fondo (degradado) con la forma del texto */
     -webkit-background-clip: text; /* Prefijo para compatibilidad con navegadores basados en WebKit (Chrome, Safari) */
@@ -83,11 +90,11 @@ section{
 }
 
 .izq{
-	background-image: linear-gradient(to right,#F5EC9E, #D8B859);
+	background-image: linear-gradient(to right,var(--amarillo-claro),  var(--amarillo-oscuro));
 	height: 5px;
 }
 .der{
-	background-image: linear-gradient(to right, #D8B859,#F5EC9E);
+	background-image: linear-gradient(to right,  var(--amarillo-oscuro),var(--amarillo-claro));
 	height: 5px;
 }
 /**/
@@ -107,8 +114,8 @@ section{
 /*FOOTER*/
 
 footer {
-  background-color: #824037;
-  border-top: #362426 5px solid;
+  background-color: var(--marron-claro);
+  border-top: var(--marron-oscuro) 5px solid;
   margin-top: 20px; 
   margin-bottom: 0;
 }
@@ -144,8 +151,8 @@ footer .row{
   
 	.dropdown-menu > li a:hover,
 	.dropdown-menu > li.show {
-	  background: #9dbe15;
-	  color: white;
+	  background: var(--marron-claro);
+	  color: var(--azul);
 	}
 	.dropdown-menu > li.show > a {
 	  color: white;

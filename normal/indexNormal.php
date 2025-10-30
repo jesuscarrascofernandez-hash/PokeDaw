@@ -39,12 +39,13 @@ include("seguridad.php");
 				<div class="col-9 col-sm-8 col-md-6 col-xl-4 mb-5 mt-3">
 					<div class="row justify justify-content-center titulos mt-5 mb-4">
 						<div class="col-12 mt-5">
-							<p class="h2 text-center">WELCOME <?php echo $_SESSION['name']; ?></p>
+							<p class="h2 text-center">Hola, <?php echo $_SESSION['name']; ?></p>
 						</div>
 						<div class="col-8 mt-4">
-							<div class="row">
-								<h1>Soy normal</h1>
-							</div>
+							<img src="<?php echo $_SESSION['name']; ?>" alt="carta">
+						</div>
+						<div class="col-12">
+							<p class="h2 text-center">Nombre de la carta</p>
 						</div>
 					</div>
 
