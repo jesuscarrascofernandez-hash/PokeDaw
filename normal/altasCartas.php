@@ -1,10 +1,11 @@
 <?php
+session_start();
 //Estableciendo la conexión
 include ("../conexion.php");
 //recogida de datos
 $idCarta=0;
 $nombreCarta=$_POST['nombre'];
-$email=$_SESSION['name'];
+$email=$_SESSION['email'];
 $ima="images/".$nombreCarta.".jpg";
 $consulta = "INSERT INTO cartas (idCarta,nombreCarta,imagenCarta,emailUsuario) 
 VALUES ('$idCarta','$nombreCarta','$ima','$email')";

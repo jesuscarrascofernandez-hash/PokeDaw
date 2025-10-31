@@ -22,7 +22,7 @@
  		</div>
  		<div class="d-none d-md-block col-md-4 p-0 der mt-4"></div>
  		<div class="col-12 mb-1">
- 			<p class="h1 text-center">Pokemon tipo agua</p>
+ 			<!--<p class="h1 text-center">Pokemon tipo agua</p>-->
  		</div>
  	</header>
  </div>

@@ -32,6 +32,7 @@
 				$row = mysqli_fetch_assoc($result);
 				if ($row["rol"] == 0) {
 					$_SESSION['name']=$row["nombre"];
+					$_SESSION['email']=$row["email"];
 					header("LOCATION:normal/indexNormal.php");
 				} else if ($row["rol"] == 1) {
 					header("LOCATION:admin/indexAdmin.php");
