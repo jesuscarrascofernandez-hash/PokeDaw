@@ -1,164 +1,213 @@
-
-
 :root {
-  	--marron-claro: #824037; 
-  	--marron-oscuro: #362426; 
- 	--azul: #A1D9EF;
-	--amarillo-claro:#F5EC9E;
-	--amarillo-oscuro:#D8B859;
+	--marron-claro: #824037;
+	--marron-oscuro: #362426;
+	--azul: #A1D9EF;
+	--amarillo-claro: #F5EC9E;
+	--amarillo-oscuro: #D8B859;
 }
+
 /*GENERAL*/
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Altura mínima = 100% de la altura del viewport */
-  margin: 0; /* Quita márgenes por defecto */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	/* Altura mínima = 100% de la altura del viewport */
+	margin: 0;
+	/* Quita márgenes por defecto */
 }
-section{
-	background-color:  var(--azul);
-	flex-grow: 1; /* ¡Esta es la clave! */
-  /* Esta regla hace que este elemento se estire
+
+section {
+	background-color: var(--azul);
+	flex-grow: 1;
+	/* ¡Esta es la clave! */
+	/* Esta regla hace que este elemento se estire
      para ocupar todo el espacio vertical disponible,
      empujando el footer hacia abajo. */
 }
-.titulos{		 
-	border-radius:8px;	
+
+.titulos {
+	border-radius: 8px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
-	color: #D8B859;
-	border:3px solid var(--marron-claro);		
-	background-color: var(--amarillo-claro);	
+	color: var(--marron-claro);
+	border: 3px solid var(--marron-claro);
+	background-color: var(--amarillo-claro);
 }
 
-.btn{
+.btn {
 	background-color: var(--marron-oscuro);
-	color:white;		
-	font-weight: bold;	
+	color: white;
+	font-weight: bold;
 }
-.btn:hover{
-	color:#F5EC9E;
+
+.btn:hover {
+	color: #F5EC9E;
 	background-color: var(--marron-claro);
 	border: 1px solid var(--marron-oscuro);
 }
-.h2{
+
+.h2 {
 	font-size: 21pt;
 }
-.cuenta{
+
+.cuenta {
 	font-size: 13pt;
 	color: var(--marron-oscuro);
 }
-.form-text{
+
+.form-text {
 	font-size: 9pt;
 }
 
 
 /*HEADER*/
-.cabecera{
-	
-	background-color:var(--marron-claro);
-	border-bottom: var(--marron-oscuro) 5px solid ;
+.cabecera {
+
+	background-color: var(--marron-claro);
+	border-bottom: var(--marron-oscuro) 5px solid;
 	margin-top: 0;
 	margin-bottom: 20PX;
-	
+
 }
 
-.h1{
-	color: #ffffff;			
+.h1 {
+	color: #ffffff;
 	font-weight: bold;
 	font-size: 20pt;
 	/* 1. Aplicar el degradado como fondo */
-    /* linear-gradient(dirección, color-inicio, color-fin) */
-    /* 'to bottom' hace que el degradado vaya de arriba hacia abajo (el valor por defecto) */
-    background-image: linear-gradient(to bottom, var(--amarillo-oscuro), var(--amarillo-claro));
-    
-    /* 2. Recortar el fondo (degradado) con la forma del texto */
-    -webkit-background-clip: text; /* Prefijo para compatibilidad con navegadores basados en WebKit (Chrome, Safari) */
-    background-clip: text;         /* Propiedad estándar */
-    
-    /* 3. Hacer que el color del texto sea transparente para que se vea el fondo recortado */
-    -webkit-text-fill-color: transparent; /* Prefijo para WebKit */
-    /*text-fill-color: transparent;*/         /* Propiedad estándar (aunque -webkit-text-fill-color es más común) */
-    color: transparent;                   /* Opción de respaldo para navegadores que no soportan lo anterior */
-    
-    /* Nota: 'display: inline-block;' puede ser útil si quieres que la caja del texto solo abarque su contenido,
+	/* linear-gradient(dirección, color-inicio, color-fin) */
+	/* 'to bottom' hace que el degradado vaya de arriba hacia abajo (el valor por defecto) */
+	background-image: linear-gradient(to bottom, var(--amarillo-oscuro), var(--amarillo-claro));
+
+	/* 2. Recortar el fondo (degradado) con la forma del texto */
+	-webkit-background-clip: text;
+	/* Prefijo para compatibilidad con navegadores basados en WebKit (Chrome, Safari) */
+	background-clip: text;
+	/* Propiedad estándar */
+
+	/* 3. Hacer que el color del texto sea transparente para que se vea el fondo recortado */
+	-webkit-text-fill-color: transparent;
+	/* Prefijo para WebKit */
+	/*text-fill-color: transparent;*/
+	/* Propiedad estándar (aunque -webkit-text-fill-color es más común) */
+	color: transparent;
+	/* Opción de respaldo para navegadores que no soportan lo anterior */
+
+	/* Nota: 'display: inline-block;' puede ser útil si quieres que la caja del texto solo abarque su contenido,
        pero para un titular centrado no suele ser necesario. */
 }
 
-.centro{
+.centro {
 	font-size: 15pt;
 	font-weight: bold;
 	color: white;
 }
 
-.izq{
-	background-image: linear-gradient(to right,var(--amarillo-claro),  var(--amarillo-oscuro));
+.izq {
+	background-image: linear-gradient(to right, var(--amarillo-claro), var(--amarillo-oscuro));
 	height: 5px;
 }
-.der{
-	background-image: linear-gradient(to right,  var(--amarillo-oscuro),var(--amarillo-claro));
+
+.der {
+	background-image: linear-gradient(to right, var(--amarillo-oscuro), var(--amarillo-claro));
 	height: 5px;
 }
+
 /**/
 .tit {
-      font-size: 5rem; /* Tamaño adaptable */
-      font-weight: bold;
-      color: #ffcb05; /* Amarillo Pokémon */
-      -webkit-text-stroke: 4px #3d7dca; /* Borde azul Pokémon */
-      /*letter-spacing: 3px;*/
-      text-shadow:
-        2px 2px 0 #003a70,
-        4px 4px 0 #003a70;
-    }
+	font-size: 5rem;
+	/* Tamaño adaptable */
+	font-weight: bold;
+	color: #ffcb05;
+	/* Amarillo Pokémon */
+	-webkit-text-stroke: 4px #3d7dca;
+	/* Borde azul Pokémon */
+	/*letter-spacing: 3px;*/
+	text-shadow:
+		2px 2px 0 #003a70,
+		4px 4px 0 #003a70;
+}
 
-			
+
 
 /*FOOTER*/
 
 footer {
-  background-color: var(--marron-claro);
-  border-top: var(--marron-oscuro) 5px solid;
-  margin-top: 20px; 
-  margin-bottom: 0;
+	background-color: var(--marron-claro);
+	border-top: var(--marron-oscuro) 5px solid;
+	margin-top: 20px;
+	margin-bottom: 0;
 }
-footer .row{
- height: 100px;
+
+footer .row {
+	height: 100px;
 }
+
 /*NAVBAR*/
 
 .dropdown-menu {
 	margin-top: 0;
-  }
-  .dropdown-menu .dropdown-toggle::after {
+}
+
+.dropdown-menu .dropdown-toggle::after {
 	vertical-align: middle;
 	border-left: 4px solid;
 	border-bottom: 4px solid transparent;
 	border-top: 4px solid transparent;
-  }
-  .dropdown-menu .dropdown .dropdown-menu {
+}
+
+.dropdown-menu .dropdown .dropdown-menu {
 	left: 100%;
 	top: 0%;
 	margin: 0 20px;
 	border-width: 0;
-  }
-  .dropdown-menu .dropdown .dropdown-menu.left {
+}
+
+.dropdown-menu .dropdown .dropdown-menu.left {
 	right: 100%;
 	left: auto;
-  }
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
 	.dropdown-menu .dropdown .dropdown-menu {
-	  margin: 0;
-	  border-width: 1px;
+		margin: 0;
+		border-width: 1px;
 	}
-  
-	.dropdown-menu > li a:hover,
-	.dropdown-menu > li.show {
-	  background: var(--marron-claro);
-	  color: var(--azul);
+
+	.dropdown-menu>li a:hover,
+	.dropdown-menu>li.show {
+		background: var(--marron-claro);
+		color: var(--azul);
 	}
-	.dropdown-menu > li.show > a {
-	  color: white;
+
+	.dropdown-menu>li.show>a {
+		color: white;
 	}
-  }
+}
 
 
 
 
+/* Mostrar Carta*/
+.cartas-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 20px;
+	justify-items: center;
+	margin-top: 20px;
+	padding-bottom: 40px;
+	/* 👈 agrega espacio dentro del borde */
+
+}
+
+
+
+.carta {
+	width: 200px;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	transition: transform 0.2s;
+}
+
+.carta:hover {
+	transform: scale(1.05);
+}

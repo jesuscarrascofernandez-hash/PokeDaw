@@ -1,5 +1,6 @@
 <?php
 include("seguridad.php");
+include("../conexion.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,16 +37,35 @@ include("seguridad.php");
 	<section>
 		<div class="container">
 			<div class="row justify-content-center align-items-center">
-				<div class="col-9 col-sm-8 col-md-6 col-xl-4 mb-5 mt-3">
+				<div class="col-12 mb-5 mt-3">
 					<div class="row justify justify-content-center titulos mt-5 mb-4">
 						<div class="col-12 mt-5">
 							<p class="h2 text-center">Hola, <?php echo $_SESSION['name']; ?></p>
+							<h4 class="text-center">Tus cartas:</h4>
+							<hr>
 						</div>
-						<div class="col-8 mt-4">
-							<img src="<?php echo $_SESSION['name']; ?>" alt="carta">
-						</div>
-						<div class="col-12">
-							<p class="h2 text-center">Nombre de la carta</p>
+						<div class="cartas-container col-8 mt-4">
+							<?php
+							//Lógica del fichero
+							$email = $_SESSION['email'];
+							$consulta = "SELECT * FROM cartas where emailUsuario='$email'";
+
+							$result = mysqli_query($conn, $consulta);
+
+							while ($row = mysqli_fetch_array($result)) {
+								$ruta = $row['imagenCarta'];
+								$nombre = htmlspecialchars($row['nombreCarta']); // Seguridad contra inyección HTML
+								echo "<div class='carta-item text-center'>
+            						<img class='carta' src='$ruta' width='250' alt='$nombre'>
+            						<p class=' mt-2'><strong>$nombre</strong></p>
+        							</div>";
+							}
+
+
+							//Cerramos la conexión
+							mysqli_close($conn);
+							?>
+
 						</div>
 					</div>
 

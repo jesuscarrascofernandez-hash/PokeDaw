@@ -43,7 +43,7 @@ include("seguridad.php");
 							<hr>
 						</div>
 
-						<form method="post" action="altasCartas.php" enctype="multipart/form-data">>
+						<form method="post" action="altasCartas.php" enctype="multipart/form-data">
 							<div class="row justify-content-center">
 								<div class="col-12 col-md-5 mt-4">
 									<div class="row justify-content-end">
@@ -53,7 +53,7 @@ include("seguridad.php");
 												<label for="nombre">Nombre de la carta</label>
 											</div>
 											<div class="form-floating mb-3 ">
-												<input type="file" name="imagen" required />
+												<input type="file" name="imagen" id="imagen" required />
 											</div>
 										</div>
 									</div>
